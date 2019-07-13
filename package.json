@@ -1,0 +1,17 @@
+{
+  "name": "boye.io",
+  "description": "My personal homepage",
+  "version": "1.0.0",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-purgecss": "^2.1.2",
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "dev": "node_modules/parcel-bundler/bin/cli.js index.html",
+    "build": "node_modules/parcel-bundler/bin/cli.js build index.html 404.html --no-source-maps",
+    "deploy": "rm -rf dist && yarn build && yarn rsync",
+    "rsync": "cp .htaccess dist && cd dist && rsync -az . root@188.226.248.40:/home/admin/web/boye.io/public_html --delete --no-perms --no-owner --no-group"
+  },
+  "license": "MIT"
+}
