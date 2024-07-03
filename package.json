@@ -1,7 +1,7 @@
 {
   "name": "boye.io",
   "description": "My personal homepage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-purgecss": "^2.1.2",
